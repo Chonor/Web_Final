@@ -15,13 +15,22 @@
     String Img_src[]={"","","","",""};//图片路径
     Integer Like[]={0,1,0,1,0};// 1是满心
     Integer List_size=5; //搜到的数目 >5  就=5 因为只有5条
-    String background_src="";//背景暂时为空
+    String background_src="";//背景可能要改改 留着
+
     String Login="Login";//登陆后的名字获取 id->名字 然后把这个改了
+
     String Search_info;//搜索内容
     String Search_resule="结果如下";//搜索结果
+    /**
+     * 类型
+     * 电影 ：movie
+     * 电视: TV
+     */
+    String types_=request.getParameter("types");
+    if(types_==null)types_="";
 
     //搜索内容
-    Search_info=request.getParameter("context");
+    Search_info=request.getParameter("content");
     if(Search_info==null)Search_info="";
     //选择的排序方式
     /**
@@ -84,29 +93,29 @@
         <div id="logo"><a href="index.jsp"></a></div>
         <div id="main_nav">
             <ul id="nav">
-                <li><a href="#">电影</a>
+                <li><a href="search.jsp?types=movie">电影</a>
                     <ul class="subnav">
-                        <li><a href="#">精选</a></li>
-                        <li><a href="#">即将上映</a></li>
-                        <li><a href="#">上映中</a></li>
-                        <li><a href="#">..加东西</a></li>
+                        <li><a href="search.jsp?types=movie&sort=hot">时下流行</a></li>
+                        <li><a href="search.jsp?types=movie&sort=data">新片上映</a></li>
+                        <li><a href="search.jsp?types=movie&sort=score">最佳口碑</a></li>
+                        <li><a href="search.jsp?types=movie&sort=max">热议影片</a></li>
                     </ul>
                 </li>
-                <li><a href="#">电视</a>
+                <li><a href="search.jsp?types=TV">电视</a>
                     <ul class="subnav">
-                        <li><a href="#">精选</a></li>
-                        <li><a href="#">即将上映</a></li>
-                        <li><a href="#">上映中</a></li>
-                        <li><a href="#">..加东西</a></li>
+                        <li><a href="search.jsp?types=TV&sort=hot">时下流行</a></li>
+                        <li><a href="search.jsp?types=TV&sort=data">新片上映</a></li>
+                        <li><a href="search.jsp?types=TV&sort=score">最佳口碑</a></li>
+                        <li><a href="search.jsp?types=TV&sort=max">热议影片</a></li>
                     </ul>
                 </li>
-                <li><a href="#">热评影视剧</a></li>
+                <li><a href="search.jsp?sort=hot">热评影视剧</a></li>
                 <li><a href="#">发现</a></li>
             </ul>
         </div>
         <div id="serach">
-            <form  action="search" method="get">
-                <input type="text"  name="content" id="content" autocomplete="off" value="<%= Search_info%>">
+            <form  action="search.jsp" method="get">
+                <input type="text"  name="content" id="content" autocomplete="off" value="<%=Search_info%>">
                 <input type="submit" id="submit" name="submit" value="">
                 <i class="fa fa-search fa-1x"></i>
             </form>
@@ -118,7 +127,7 @@
 <div id="search_outer">
     <div id="search_contain">
         <form action="search.jsp" method="get" id="serach_form">
-            <input type="text"  name="context" id="search1" value="<%=Search_info%>">
+            <input type="text"  name="content" id="search1" value="<%=Search_info%>">
             <input type="submit" id="submit1"  name="submit" value="搜索">
             <select id="sort" name="sort">
                 <option value="unselect" <%=Chooess[0]%>>请选择</option>
@@ -177,8 +186,8 @@
                 <i class="fa fa-heart-o" id="like5" onclick="onmouseclick(5)"></i>
             </li>
         </ul>
-        <a href="search.jsp?pgno=<%=pgprev%>&context=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>" id="pre_page" class="page">上一页</a>
-        <a href="search.jsp?pgno=<%=pgnext%>&context=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>" id="next_page"  class="page" >下一页</a>
+        <a href="search.jsp?pgno=<%=pgprev%>&content=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>&types=<%=types_%>" id="pre_page" class="page">上一页</a>
+        <a href="search.jsp?pgno=<%=pgnext%>&content=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>&types=<%=types_%>" id="next_page"  class="page" >下一页</a>
     </div>
 </div>
 

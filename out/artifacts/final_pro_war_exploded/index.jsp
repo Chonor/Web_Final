@@ -33,30 +33,30 @@
         <div id="logo"><a href="index.jsp"></a></div>
         <div id="main_nav">
             <ul id="nav">
-                <li><a href="#">电影</a>
+                <li><a href="search.jsp?types=movie">电影</a>
                     <ul class="subnav">
-                        <li><a href="#">精选</a></li>
-                        <li><a href="#">即将上映</a></li>
-                        <li><a href="#">上映中</a></li>
-                        <li><a href="#">..加东西</a></li>
+                        <li><a href="search.jsp?types=movie&sort=hot">时下流行</a></li>
+                        <li><a href="search.jsp?types=movie&sort=data">新片上映</a></li>
+                        <li><a href="search.jsp?types=movie&sort=score">最佳口碑</a></li>
+                        <li><a href="search.jsp?types=movie&sort=max">热议影片</a></li>
                     </ul>
                 </li>
-                <li><a href="#">电视</a>
+                <li><a href="search.jsp?types=TV">电视</a>
                     <ul class="subnav">
-                        <li><a href="#">精选</a></li>
-                        <li><a href="#">即将上映</a></li>
-                        <li><a href="#">上映中</a></li>
-                        <li><a href="#">..加东西</a></li>
+                        <li><a href="search.jsp?types=TV&sort=hot">时下流行</a></li>
+                        <li><a href="search.jsp?types=TV&sort=data">新片上映</a></li>
+                        <li><a href="search.jsp?types=TV&sort=score">最佳口碑</a></li>
+                        <li><a href="search.jsp?types=TV&sort=max">热议影片</a></li>
                     </ul>
                 </li>
-                <li><a href="#">热评影视剧</a></li>
+                <li><a href="search.jsp?sort=hot">热评影视剧</a></li>
                 <li><a href="#">发现</a></li>
             </ul>
         </div>
         <div id="serach">
-            <form  action="search" method="get">
-                <input type="text"  name="content" id="content" autocomplete="off">
-                <input type="submit" id="submit"  value="">
+            <form  action="search.jsp" method="get">
+                <input type="text"  name="content" id="content" autocomplete="off" value="">
+                <input type="submit" id="submit" name="submit" value="">
                 <i class="fa fa-search fa-1x"></i>
             </form>
         </div>
