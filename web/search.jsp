@@ -84,7 +84,7 @@
 <div id="header_outer">
     <div id="header" class="wrapper">
         <p>网站名字啊</p>
-        <a href="#"><i class="fa fa-user-circle-o"></i><%=Login%></a>
+        <a href="#"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
 

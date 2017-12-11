@@ -7,10 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49740d05-b09b-4b92-bc52-251490af3a70" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/search.jsp" afterPath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/search.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change beforePath="$PROJECT_DIR$/web/search.jsp" afterPath="$PROJECT_DIR$/web/search.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +22,8 @@
       <file leaf-file-name="search.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1588">
-              <caret line="189" column="18" lean-forward="true" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
+            <state relative-caret-position="350">
+              <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -36,7 +32,7 @@
       <file leaf-file-name="search_.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/search_.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="927">
               <caret line="312" column="1" lean-forward="false" selection-start-line="312" selection-start-column="1" selection-end-line="312" selection-end-column="1" />
               <folding />
             </state>
@@ -149,6 +145,15 @@
               <item name="final_pro" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="final_pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Tomcat 8.5.23" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -323,12 +328,12 @@
       <workItem from="1513002175261" duration="397000" />
       <workItem from="1513002954553" duration="468000" />
       <workItem from="1513003445732" duration="5666000" />
-      <workItem from="1513011014216" duration="1118000" />
+      <workItem from="1513011014216" duration="1571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9533000" />
+    <option name="totallyTimeSpent" value="9986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2331" y="-9" width="2341" height="1368" extended-state="6" />
@@ -465,7 +470,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/search_.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+        <state relative-caret-position="927">
           <caret line="312" column="1" lean-forward="false" selection-start-line="312" selection-start-column="1" selection-end-line="312" selection-end-column="1" />
           <folding />
         </state>
@@ -473,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1588">
-          <caret line="189" column="18" lean-forward="true" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
+        <state relative-caret-position="350">
+          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
           <folding />
         </state>
       </provider>
