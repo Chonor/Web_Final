@@ -33,12 +33,14 @@
 	    user_star[i]=i+1;
 	}
 	
-	//随机推荐部分变量
-	String[] recommend_img=new String[5];//随机推荐电影的图片
-	String[] recommend_name=new String[5];//随机推荐电影的名称
-	for(int i=0;i<5;i++){ //初始化
+	//推荐部分变量
+	String[] recommend_img=new String[4];//推荐电影的图片
+	String[] recommend_name=new String[4];//推荐电影的名称
+    Integer[] recommend_id=new Integer[4];//推荐电影的名称
+	for(int i=0;i<4;i++){ //初始化
 	    recommend_img[i]="推荐.jpg";
 	    recommend_name[i]="Men In Black";
+	    recommend_id[i]=i;
 	}
 
     Integer pgno = 0; //当前页号
@@ -219,6 +221,17 @@
         <a href="info.jsp?pgno=<%=pgnext%>&mid=<%=mid%>" id="next_page"  class="page">下一页</a>
         <a href="info.jsp?pgno=<%=pgprev%>&mid=<%=mid%>" id="pre_page" class="page">上一页</a>
         <script>onstart(<%=pgno%>,<%=info_cnt%>)</script>
+    </div>
+</div>
+<div id="featured">
+    <div id="featured_sub">
+        <p>本周精选</p>
+        <ul class="subshow">
+            <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[0]%>'" onmousemove="onmoveli(0)" onmouseout="outmoveli(0)"><img src="<%=recommend_img[0]%>"><a><%=recommend_name[0]%></a></li>
+            <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[1]%>'" onmousemove="onmoveli(1)" onmouseout="outmoveli(1)"><img src="<%=recommend_img[1]%>"><a><%=recommend_name[1]%></a></li>
+            <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[2]%>'" onmousemove="onmoveli(2)" onmouseout="outmoveli(2)"><img src="<%=recommend_img[2]%>"><a><%=recommend_name[2]%></a></li>
+            <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[3]%>'" onmousemove="onmoveli(3)" onmouseout="outmoveli(3)"><img src="<%=recommend_img[3]%>"><a><%=recommend_name[3]%></a></li>
+        </ul>
     </div>
 </div>
 <div id="footer_outer">

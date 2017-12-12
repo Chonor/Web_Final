@@ -145,7 +145,7 @@
 <div id="searched_outer">
     <div id="searched">
         <ul id="searched_list">
-            <li name="search_li">
+            <li name="search_li" onclick="location.href='info.jsp?mid=<%=mid[0]%>/'">
                 <img src="<%=Img_src[0]%>" class="search_img">
                 <p class="search_name"><%=Name[0]%></p>
                 <p class="search_info"><%=Info[0]%></p>
@@ -154,7 +154,7 @@
                 <i class="fa fa-heart-o" name="like" onclick="onmouseclick(0)"></i>
 
             </li>
-            <li name="search_li">
+            <li name="search_li" onclick="location.href='info.jsp?mid=<%=mid[1]%>/'">
                 <img src="<%=Img_src[1]%>" class="search_img">
                 <p class="search_name"><%=Name[1]%></p>
                 <p class="search_info"><%=Info[1]%></p>
@@ -162,7 +162,7 @@
                 <hr class="search_hr" >
                 <i class="fa fa-heart-o" name="like" onclick="onmouseclick(1)"></i>
             </li>
-            <li name="search_li">
+            <li name="search_li" onclick="location.href='info.jsp?mid=<%=mid[2]%>/'">
                 <img src="<%=Img_src[2]%>" class="search_img">
                 <p class="search_name"><%=Name[2]%></p>
                 <p class="search_info"><%=Info[2]%></p>
@@ -170,7 +170,7 @@
                 <hr class="search_hr">
                 <i class="fa fa-heart-o" name="like" onclick="onmouseclick(2)"></i>
             </li>
-            <li name="search_li">
+            <li name="search_li" onclick="location.href='info.jsp?mid=<%=mid[3]%>/'">
                 <img src="<%=Img_src[3]%>" class="search_img">
                 <p class="search_name"><%=Name[3]%></p>
                 <p class="search_info"><%=Info[3]%></p>
@@ -178,7 +178,7 @@
                 <hr class="search_hr">
                 <i class="fa fa-heart-o" name="like" onclick="onmouseclick(3)"></i>
             </li>
-            <li name="search_li">
+            <li name="search_li" onclick="location.href='info.jsp?mid=<%=mid[4]%>/'">
                 <img src="<%=Img_src[4]%>" class="search_img">
                 <p class="search_name"><%=Name[4]%></p>
                 <p class="search_info"><%=Info[4]%></p>

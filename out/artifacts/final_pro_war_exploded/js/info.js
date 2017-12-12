@@ -28,3 +28,13 @@ function onstart(cnt1,cnt2){
         obj[i].hidden="hidden";
     }
 }
+function onmoveli(i) {
+    var  obj = document.getElementsByName("show_li");
+    obj[i].style.borderRadius="10px";
+    obj[i].style.boxShadow="0px 0px 5px rgba(0,131,166,.4)";
+}
+function outmoveli(i) {
+    var  obj = document.getElementsByName("show_li");
+    obj[i].style.borderRadius="10px";
+    obj[i].style.boxShadow="none";
+}
