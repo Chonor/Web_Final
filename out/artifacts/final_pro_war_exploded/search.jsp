@@ -10,6 +10,7 @@
 <%
     String user_id = (String)session.getAttribute("user_id");//用户id
     String Name[]={"1","2","3","4","5"};//存放电影名
+    String mid[]={"1","2","3","4","5"};//存放电影id
     String Info[]={"1","2","3","4","5"};//存放电影信息
     String Score[]={"9","9.5","6","7.5","8.5"};//存放分数
     String Img_src[]={"","","","",""};//图片路径
@@ -76,7 +77,7 @@
     </style>
 </head>
 
-<body onLoad="onstart()">
+<body onload="onstart(<%=pgno%>,<%=List_size%>)">
 <div id="bk_outer">
     <img src="" id="main_bk">
 </div>
@@ -150,7 +151,7 @@
                 <p class="search_info"><%=Info[0]%></p>
                 <p class="search_score"><%=Score[0]%></p>
                 <hr class="search_hr">
-                <i class="fa fa-heart-o" id="like1" onclick="onmouseclick(1)"></i>
+                <i class="fa fa-heart-o" name="like" onclick="onmouseclick(0)"></i>
 
             </li>
             <li name="search_li">
@@ -159,7 +160,7 @@
                 <p class="search_info"><%=Info[1]%></p>
                 <p class="search_score"><%=Score[1]%></p>
                 <hr class="search_hr" >
-                <i class="fa fa-heart-o" id="like2" onclick="onmouseclick(2)"></i>
+                <i class="fa fa-heart-o" name="like" onclick="onmouseclick(1)"></i>
             </li>
             <li name="search_li">
                 <img src="<%=Img_src[2]%>" class="search_img">
@@ -167,7 +168,7 @@
                 <p class="search_info"><%=Info[2]%></p>
                 <p class="search_score"><%=Score[2]%></p>
                 <hr class="search_hr">
-                <i class="fa fa-heart-o" id="like3" onclick="onmouseclick(3)"></i>
+                <i class="fa fa-heart-o" name="like" onclick="onmouseclick(2)"></i>
             </li>
             <li name="search_li">
                 <img src="<%=Img_src[3]%>" class="search_img">
@@ -175,7 +176,7 @@
                 <p class="search_info"><%=Info[3]%></p>
                 <p class="search_score"><%=Score[3]%></p>
                 <hr class="search_hr">
-                <i class="fa fa-heart-o" id="like4" onclick="onmouseclick(4)"></i>
+                <i class="fa fa-heart-o" name="like" onclick="onmouseclick(3)"></i>
             </li>
             <li name="search_li">
                 <img src="<%=Img_src[4]%>" class="search_img">
@@ -183,7 +184,7 @@
                 <p class="search_info"><%=Info[4]%></p>
                 <p class="search_score"><%=Score[4]%></p>
                 <hr class="search_hr">
-                <i class="fa fa-heart-o" id="like5" onclick="onmouseclick(5)"></i>
+                <i class="fa fa-heart-o" name="like" onclick="onmouseclick(4)"></i>
             </li>
         </ul>
         <a href="search.jsp?pgno=<%=pgprev%>&content=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>&types=<%=types_%>" id="pre_page" class="page">上一页</a>
@@ -196,36 +197,35 @@
 
     </div>
 </div>
+
 </body>
 </html>
 <script>
-    var like1=<%=Like[0]%>;
-    var like2=<%=Like[1]%>;
-    var like3=<%=Like[2]%>;
-    var like4=<%=Like[3]%>;
-    var like5=<%=Like[4]%>;
+    var like0=<%=Like[0]%>;
+    var like1=<%=Like[1]%>;
+    var like2=<%=Like[2]%>;
+    var like3=<%=Like[3]%>;
+    var like4=<%=Like[4]%>;
     var list_size=<%=List_size%>;
-    var i_like1=document.getElementById("like1");
-    var i_like2=document.getElementById("like2");
-    var i_like3=document.getElementById("like3");
-    var i_like4=document.getElementById("like4");
-    var i_like5=document.getElementById("like5");
-    function onstart(){
+    var like=document.getElementsByName("like");
+    function onstart(cnt1,cnt2){
+        if(cnt1==0)document.getElementById("pre_page").hidden="hidden";
+        if(cnt2<5)document.getElementById("next_page").hidden="hidden";
 
-        if(like1==1)i_like1.className="fa fa-heart";
-        else i_like1.className="fa fa-heart-o";
+        if(like0==1)like[0].className="fa fa-heart";
+        else like[0].className="fa fa-heart-o";
 
-        if(like2==1)i_like2.className="fa fa-heart";
-        else i_like2.className="fa fa-heart-o";
+        if(like1==1)like[1].className="fa fa-heart";
+        else like[1].className="fa fa-heart-o";
 
-        if(like3==1)i_like3.className="fa fa-heart";
-        else i_like3.className="fa fa-heart-o";
+        if(like2==1)like[2].className="fa fa-heart";
+        else like[2].className="fa fa-heart-o";
 
-        if(like4==1)i_like4.className="fa fa-heart";
-        else i_like4.className="fa fa-heart-o";
+        if(like3==1)like[3].className="fa fa-heart";
+        else like[3].className="fa fa-heart-o";
 
-        if(like5==1)i_like5.className="fa fa-heart";
-        else i_like5.className="fa fa-heart-o";
+        if(like4==1)like[4].className="fa fa-heart";
+        else like[4].className="fa fa-heart-o";
 
         display_li();
     }
@@ -236,63 +236,63 @@
         }
     }
     function onmouseclick(i){
-        if(i==1){
-            if(like1==1){
-                like1=0;
-                i_like1.className="fa fa-heart-o";
+        if(i==0){
+            if(like0==1){
+                like0=0;
+                like[0].className="fa fa-heart-o";
                 <%Like[0]=0;%>
             }
             else{
-                like1=1;
-                i_like1.className="fa fa-heart";
+                like0=1;
+                like[0].className="fa fa-heart";
                 <%Like[0]=1;%>
+            }
+        }
+        else if(i==1){
+            if(like1==1){
+                like1=0;
+                like[1].className="fa fa-heart-o";
+                <%Like[1]=0;%>
+            }
+            else{
+                like1=1;
+                like[1].className="fa fa-heart";
+                <%Like[1]=1;%>
             }
         }
         else if(i==2){
             if(like2==1){
                 like2=0;
-                i_like2.className="fa fa-heart-o";
-                <%Like[1]=0;%>
+                like[2].className="fa fa-heart-o";
+                <%Like[2]=0;%>
             }
             else{
                 like2=1;
-                i_like2.className="fa fa-heart";
-                <%Like[1]=1;%>
+                like[2].className="fa fa-heart";
+                <%Like[2]=1;%>
             }
         }
         else if(i==3){
             if(like3==1){
                 like3=0;
-                i_like3.className="fa fa-heart-o";
-                <%Like[2]=0;%>
+                like[3].className="fa fa-heart-o";
+                <%Like[3]=0;%>
             }
             else{
                 like3=1;
-                i_like3.className="fa fa-heart";
-                <%Like[2]=1;%>
+                like[3].className="fa fa-heart";
+                <%Like[3]=1;%>
             }
         }
         else if(i==4){
             if(like4==1){
                 like4=0;
-                i_like4.className="fa fa-heart-o";
-                <%Like[3]=0;%>
-            }
-            else{
-                like4=1;
-                i_like4.className="fa fa-heart";
-                <%Like[3]=1;%>
-            }
-        }
-        else if(i==5){
-            if(like5==1){
-                like5=0;
-                i_like5.className="fa fa-heart-o";
+                like[4].className="fa fa-heart-o";
                 <%Like[4]=0;%>
             }
             else{
-                like5=1;
-                i_like5.className="fa fa-heart";
+                like4=1;
+                like[4].className="fa fa-heart";
                 <%Like[4]=1;%>
             }
         }
