@@ -7,12 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49740d05-b09b-4b92-bc52-251490af3a70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/info.jsp" afterPath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/info.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/search.jsp" afterPath="$PROJECT_DIR$/out/artifacts/final_pro_war_exploded/search.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/css/index_.css" afterPath="$PROJECT_DIR$/web/css/index_.css" />
       <change beforePath="$PROJECT_DIR$/web/css/info.css" afterPath="$PROJECT_DIR$/web/css/info.css" />
+      <change beforePath="$PROJECT_DIR$/web/css/search_.css" afterPath="$PROJECT_DIR$/web/css/search_.css" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change beforePath="$PROJECT_DIR$/web/info.jsp" afterPath="$PROJECT_DIR$/web/info.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/js/info.js" afterPath="$PROJECT_DIR$/web/js/info.js" />
       <change beforePath="$PROJECT_DIR$/web/search.jsp" afterPath="$PROJECT_DIR$/web/search.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +27,18 @@
       <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6401">
-              <caret line="180" column="78" lean-forward="false" selection-start-line="180" selection-start-column="78" selection-end-line="180" selection-end-column="78" />
+            <state relative-caret-position="3139">
+              <caret line="73" column="65" lean-forward="false" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -38,8 +47,8 @@
       <file leaf-file-name="search_.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/search_.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6279">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="69">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +57,8 @@
       <file leaf-file-name="info.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/info.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="402" column="1" lean-forward="true" selection-start-line="402" selection-start-column="1" selection-end-line="402" selection-end-column="1" />
+            <state relative-caret-position="46">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="info.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-142">
-              <caret line="191" column="21" lean-forward="false" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
+            <state relative-caret-position="425">
+              <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -78,8 +87,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2114">
-              <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+            <state relative-caret-position="527">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -88,8 +97,8 @@
       <file leaf-file-name="index_.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/index_.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="69">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -125,14 +134,15 @@
         <option value="$PROJECT_DIR$/web/main_css.css" />
         <option value="$PROJECT_DIR$/web/scss/index.jsp" />
         <option value="$PROJECT_DIR$/web/search.html" />
-        <option value="$PROJECT_DIR$/web/css/search_.css" />
-        <option value="$PROJECT_DIR$/web/css/index_.css" />
         <option value="$PROJECT_DIR$/web/js/search.js" />
-        <option value="$PROJECT_DIR$/web/search.jsp" />
+        <option value="$PROJECT_DIR$/web/js/info.js" />
         <option value="$PROJECT_DIR$/web/info.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/js/info.js" />
+        <option value="$PROJECT_DIR$/web/css/index_.css" />
         <option value="$PROJECT_DIR$/web/css/info.css" />
+        <option value="$PROJECT_DIR$/web/css/search_.css" />
+        <option value="$PROJECT_DIR$/web/search.jsp" />
+        <option value="$PROJECT_DIR$/web/css/header.css" />
       </list>
     </option>
   </component>
@@ -424,12 +434,12 @@
       <workItem from="1513011014216" duration="2128000" />
       <workItem from="1513037073388" duration="5508000" />
       <workItem from="1513042705549" duration="8059000" />
-      <workItem from="1513083745021" duration="8584000" />
+      <workItem from="1513083745021" duration="9179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32694000" />
+    <option name="totallyTimeSpent" value="33289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2331" y="-9" width="2341" height="1368" extended-state="6" />
@@ -686,50 +696,10 @@
     <entry file="file://$PROJECT_DIR$/web/scss/index.jsp" />
     <entry file="file://$PROJECT_DIR$/web/index.html" />
     <entry file="file://$PROJECT_DIR$/web/search.html" />
-    <entry file="file://$PROJECT_DIR$/web/css/search_.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6279">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/index_.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6401">
-          <caret line="180" column="78" lean-forward="false" selection-start-line="180" selection-start-column="78" selection-end-line="180" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2114">
-          <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="402" column="1" lean-forward="true" selection-start-line="402" selection-start-column="1" selection-end-line="402" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -742,10 +712,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/index_.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="191" column="21" lean-forward="false" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/search_.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3139">
+          <caret line="73" column="65" lean-forward="false" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
           <folding />
         </state>
       </provider>

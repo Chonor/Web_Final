@@ -71,6 +71,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/search_.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <title>Search</title>
 
     <style>

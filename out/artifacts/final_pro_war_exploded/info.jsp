@@ -59,6 +59,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/info.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <script src="js/info.js"></script>
     <style>
     </style>
