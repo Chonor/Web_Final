@@ -357,6 +357,7 @@ li {list-style-type:none}
     overflow: visible;
     height: auto;
     transition:height 1s;
+    min-height: 80px;
 }
 .info{
     position: absolute;
@@ -392,12 +393,7 @@ li {list-style-type:none}
 .page:active{
     box-shadow: inset 0px 0px 10px gray;
 }
-#next_page{
-    right: 0px;
-}
-#pre_page{
-    right: 150px;
-}
+
 #footer_outer{
     background: #dfdfdf;
     clear: both;

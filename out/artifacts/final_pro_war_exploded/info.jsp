@@ -5,30 +5,32 @@
 %>
 <%
 	String user_id = (String)session.getAttribute("user_id");//用户id
+    String mid = request.getParameter("mid");//电影id
+    if(mid==null)mid="";
 	String Login="Loign";//登陆后显示用户名
 	String title_call_to_movie,tagline,score,movie_src,movie_introduction,num_comment,my_img=new String();
 	title_call_to_movie="Men In Black Trilogy"; //电影名称
 	tagline="NOW ON 4K ULTRA HD™"; //二级标题，tag一类的东西
-	score="5.0分"; //电影评分
+	score="5.0"; //电影评分
 	movie_src="onesheet.jpg"; //电影图片src
 	movie_introduction="test test test"; //电影简介
 	num_comment="4396"; //总评论数
 	my_img="头像2.0.png"; //已登录用户的头像(就是准备发布评论的人的头像)
-	
+	Integer info_cnt=5; //当前界面信息数  最大为5 最小1
 	//以下为其他用户评论的变量
-	String[] user_name=new String[5];//用户ID
+	String[] user_name=new String[5];//用户名
 	String[] user_img=new String[5];//用户头像
 	String[] user_comment=new String[5];//用户评论内容
-	String[] user_No=new String[5];//用户编号
+	String[] floor_No=new String[5];//楼层编号
 	String[] user_time=new String[5];//用户评论时间
-	String[] user_star=new String[5];//该用户评星
-	for(int i=0;i<5;i++){ //初始化
-	    user_name[i]="用户"+(i+1)+"ID";
+	Integer[] user_star=new Integer[5];//该用户评星
+	for(int i=0;i<info_cnt;i++){ //初始化
+	    user_name[i]="用户"+(i+1);
 	    user_img[i]="头像2.0.png";
 	    user_comment[i]="用户"+(i+1)+"评论内容";
-	    user_No[i]="#"+(i+1);
+        floor_No[i]="#"+(i+1);
 	    user_time[i]="2017.12.11 20:00";
-	    user_star[i]="★★";
+	    user_star[i]=i+1;
 	}
 	
 	//随机推荐部分变量
@@ -38,12 +40,20 @@
 	    recommend_img[i]="推荐.jpg";
 	    recommend_name[i]="Men In Black";
 	}
+
+    Integer pgno = 0; //当前页号
+    String param = request.getParameter("pgno");
+    if(param != null && !param.isEmpty()){
+        pgno = Integer.parseInt(param);
+    }
+    int pgprev = (pgno>0)?pgno-1:0;
+    int pgnext = pgno+1;
 %>
 <!DOCTYPE  html>
 <html  lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>TEST</title>
+    <title>Info</title>
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/info.css" />
@@ -53,14 +63,15 @@
 
 </head>
 <body >
-<div id="bk_outer">
-    <img src="onesheet.jpg" id="main_bk">
+<div id="bk_outer" >
+
+    <img src="<%=movie_src%>" id="main_bk">
 </div>
 
 <div id="header_outer">
     <div id="header" class="wrapper">
         <p>网站名字啊</p>
-        <a href="#"><i class="fa fa-user-circle-o"></i> Login</a>
+        <a href="#"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
 
@@ -98,25 +109,28 @@
         </div>
     </div>
 </div>
+
+
 <div id="info_main">
     <div id="info_inner">
-        <h1>Men In Black Trilogy</h1>
-        <h3>NOW ON 4K ULTRA HD™</h3>
-        <p id="score">5.0</p>
-        <img id="info_img" src="onesheet.jpg" id="info_inner_img">
+        <h1><%=title_call_to_movie%></h1>
+        <h3><%=tagline%></h3>
+        <p id="score"><%=score%></p>
+        <img id="info_img" src="<%=movie_src%>" id="info_inner_img">
         <div id="info_text">
-            just test
+            <%=movie_introduction%>
         </div>
     </div>
 </div>
 <div id="comment_outer">
     <div id="comment">
-        <p id="num_of_comments">xxx评论</p>
+        <p id="num_of_comments"><%=num_comment%>评论</p>
         <div id="user_comment">
-            <img id="face_img" src="头像2.0.png">
-            <form action="info.html" method="post" id="comment_form">
-                <textarea id="input_area"  rows="5" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
-                <button type="submit" id="comment_submit" name="submit" value="OK">发表评论</button>
+            <img id="face_img" src="<%=my_img%>">
+            <form action="info.jsp" method="get" id="comment_form">
+                <input type="text" name="mid" hidden value="<%=mid%>">
+                <textarea id="input_area"  name="content" rows="5" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
+
                 <div id="rating" >
                     <p>
                         <input type="radio" name="level" value="1">
@@ -129,138 +143,82 @@
                 <div id ="real_star">
                     <span><i name="real_star" class="fa fa-star"  onMouseMove="onmovestart(1)"></i></span>
                     <span><i name="real_star" class="fa fa-star" onMouseMove="onmovestart(2)"></i></span>
-                    <span><i name="real_star" class="fa fa-star" onMouseMove="onmovestart(3)"
-                    ></i></span>
+                    <span><i name="real_star" class="fa fa-star" onMouseMove="onmovestart(3)"></i></span>
                     <span><i name="real_star" class="fa fa-star-o" onMouseMove="onmovestart(4)"></i></span>
                     <span><i name="real_star" class="fa fa-star-o" onMouseMove="onmovestart(5)"></i></span>
                 </div>
-                <p  id="upfile">点击上传图片<input type="file" name="file"></p>
+                <p id="upfile">点击上传图片<input type="file" name="file"></p>
+                <button type="submit" id="comment_submit" name="submit" value="OK">发表评论</button>
             </form>
         </div>
         <div class="list_item" name="list_item">
-            <div>
-                <img class="user_img" src="头像2.0.png"></div>
+            <div><img class="user_img" src="<%=user_img[0]%>"></div>
             <div class="list_content">
-                <p class="user_name">用户1姓名</p>
-                <p class="comment_content">用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容用户1评论内容</p>
-
+                <p class="user_name"><%=user_name[0]%></p>
+                <p class="comment_content"><%=user_comment[0]%></p>
             </div>
             <div class="info">
-                <div class="floot">
-                    #1
-                </div>
-                <div class="comment_stat">
-                    <span name="star_add" ><script>star_add(0,3)</script></span>
-                </div>
-                <div class="comment_time">
-                    30分钟前
-                </div>
-                <div class="comment_select">
-                    <a href="#">加入黑名单</a>
-                    <a  href="#">举报</a>
-                    <a  href="#">删除</a>
-                </div>
+                <div class="floot"><%=floor_No[0]%></div>
+                <div class="comment_stat"><span name="star_add" ><script>star_add(0,<%=user_star[0]%>)</script></span></div>
+                <div class="comment_time"> <%=user_time[0]%></div>
+                <div class="comment_select"><a href="#">加入黑名单</a><a  href="#">举报</a><a  href="#">删除</a></div>
             </div>
         </div>
         <div class="list_item" name="list_item">
-            <div><img class="user_img" src="头像2.0.png"></div>
+            <div><img class="user_img" src="<%=user_img[1]%>"></div>
             <div class="list_content">
-                <p class="user_name">用户2姓名</p>
-                <p class="comment_content">用户2评论内容用户2评论内容用户2评论内容</p>
-
+                <p class="user_name"><%=user_name[1]%></p>
+                <p class="comment_content"><%=user_comment[1]%></p>
             </div>
             <div class="info">
-                <div class="floot">
-                    #1
-                </div>
-                <div class="comment_stat">
-                    <span name="star_add"><script>star_add(1,3)</script></span>
-                </div>
-                <div class="comment_time">
-                    30分钟前
-                </div>
-                <div class="comment_select">
-                    <a href="#">加入黑名单</a>
-                    <a  href="#">举报</a>
-                    <a  href="#">删除</a>
-                </div>
+                <div class="floot"><%=floor_No[1]%></div>
+                <div class="comment_stat"><span name="star_add" ><script>star_add(1,<%=user_star[1]%>)</script></span></div>
+                <div class="comment_time"> <%=user_time[1]%></div>
+                <div class="comment_select"><a href="#">加入黑名单</a><a  href="#">举报</a><a  href="#">删除</a></div>
             </div>
         </div>
         <div class="list_item" name="list_item">
-            <div><img class="user_img"  src="头像2.0.png"></div>
+            <div><img class="user_img" src="<%=user_img[2]%>"></div>
             <div class="list_content">
-                <p class="user_name">用户3姓名</p>
-                <p class="comment_content">用户3评论内容</p>
-
+                <p class="user_name"><%=user_name[2]%></p>
+                <p class="comment_content"><%=user_comment[2]%></p>
             </div>
             <div class="info">
-                <div class="floot">
-                    #1
-                </div>
-                <div class="comment_stat">
-                    <span name="star_add"><script>star_add(2,3)</script></i></span>
-                </div>
-                <div class="comment_time">
-                    30分钟前
-                </div>
-                <div class="comment_select">
-                    <a href="#">加入黑名单</a>
-                    <a  href="#">举报</a>
-                    <a  href="#">删除</a>
-                </div>
+                <div class="floot"><%=floor_No[2]%></div>
+                <div class="comment_stat"><span name="star_add" ><script>star_add(2,<%=user_star[2]%>)</script></span></div>
+                <div class="comment_time"> <%=user_time[2]%></div>
+                <div class="comment_select"><a href="#">加入黑名单</a><a  href="#">举报</a><a  href="#">删除</a></div>
             </div>
         </div>
         <div class="list_item" name="list_item">
-            <div><img class="user_img"  src="头像2.0.png"></div>
+            <div><img class="user_img" src="<%=user_img[3]%>"></div>
             <div class="list_content">
-                <p class="user_name">用户4姓名</p>
-                <p class="comment_content">用户4评论内容</p>
-
+                <p class="user_name"><%=user_name[3]%></p>
+                <p class="comment_content"><%=user_comment[3]%></p>
             </div>
             <div class="info">
-                <div class="floot">
-                    #1
-                </div>
-                <div class="comment_stat">
-                    <span name="star_add"><script>star_add(3,3)</script></span>
-                </div>
-                <div class="comment_time">
-                    30分钟前
-                </div>
-                <div class="comment_select">
-                    <a href="#">加入黑名单</a>
-                    <a  href="#">举报</a>
-                    <a  href="#">删除</a>
-                </div>
+                <div class="floot"><%=floor_No[3]%></div>
+                <div class="comment_stat"><span name="star_add"><script>star_add(3,<%=user_star[3]%>)</script></span></div>
+                <div class="comment_time"> <%=user_time[3]%></div>
+                <div class="comment_select"><a href="#">加入黑名单</a><a  href="#">举报</a><a  href="#">删除</a></div>
             </div>
         </div>
         <div class="list_item" name="list_item">
-            <div><img class="user_img" src="头像2.0.png"></div>
+            <div><img class="user_img" src="<%=user_img[4]%>"></div>
             <div class="list_content">
-                <p class="user_name">用户5姓名</p>
-                <p class="comment_content">用户5评论内容用户5评论内容用户5评论内容用户5评论内容用户5评论内容用户5评论内容用户5评论内容用户5评论内容用户5评论内容</p>
-
+                <p class="user_name"><%=user_name[4]%></p>
+                <p class="comment_content"><%=user_comment[4]%></p>
             </div>
             <div class="info">
-                <div class="floot">
-                    #1
-                </div>
-                <div class="comment_stat">
-                    <span name="star_add"><script>star_add(4,3)</script></span>
-                </div>
-                <div class="comment_time">
-                    30分钟前
-                </div>
-                <div class="comment_select">
-                    <a href="#">加入黑名单</a>
-                    <a  href="#">举报</a>
-                    <a  href="#">删除</a>
-                </div>
+                <div class="floot"><%=floor_No[4]%></div>
+                <div class="comment_stat"><span name="star_add" ><script>star_add(4,<%=user_star[4]%>)</script></span></div>
+                <div class="comment_time"> <%=user_time[4]%></div>
+                <div class="comment_select"><a href="#">加入黑名单</a><a  href="#">举报</a><a  href="#">删除</a></div>
             </div>
         </div>
-        <a href="#" id="next_page"  class="page">下一页</a>
-        <a href="#" id="pre_page" class="page">上一页</a>
-
+        <a href="info.jsp?pgno=<%=pgnext%>&mid=<%=mid%>" id="next_page"  class="page">下一页</a>
+        <a href="info.jsp?pgno=<%=pgprev%>&mid=<%=mid%>" id="pre_page" class="page">上一页</a>
+        <script>onstart(<%=pgno%>,<%=info_cnt%>)</script>
     </div>
 </div>
 <div id="footer_outer">
