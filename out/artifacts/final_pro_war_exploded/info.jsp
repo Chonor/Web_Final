@@ -4,6 +4,8 @@
     pageEncoding="UTF-8"
 %>
 <%
+	String user_id = (String)session.getAttribute("user_id");//用户id
+	String Login="Loign";//登陆后显示用户名
 	String title_call_to_movie,tagline,score,movie_src,movie_introduction,num_comment,my_img=new String();
 	title_call_to_movie="Men In Black Trilogy"; //电影名称
 	tagline="NOW ON 4K ULTRA HD™"; //二级标题，tag一类的东西
@@ -40,20 +42,59 @@
 <!DOCTYPE  html>
 <html  lang="zh-cn">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>TEST</title>
+    <meta charset="utf-8">
+    <title>TEST</title>
 	<link rel="stylesheet" type="text/css" href="css/info.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 	<style>
 	</style>
 </head>
 <body>
-  <div id="head_main">
-	  <div id="head_text">TEST</div>
-    </div>
-    
-  <div>
-	<!--给你留空的部分!-->
-  </div>
+<div id="bk_outer">
+	<img src="<%=movie_src%>" id="main_bk">
+</div>
+
+<div id="header_outer">
+	<div id="header" class="wrapper">
+		<p>网站名字啊</p>
+		<a href="#"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
+	</div><!--header-->
+</div> <!--header_outer-->
+
+<div id="nav_outer">
+	<div id="nav_in" class="wrapper">
+		<div id="logo"><a href="index.jsp"></a></div>
+		<div id="main_nav">
+			<ul id="nav">
+				<li><a href="search.jsp?types=movie">电影</a>
+					<ul class="subnav">
+						<li><a href="search.jsp?types=movie&sort=hot">时下流行</a></li>
+						<li><a href="search.jsp?types=movie&sort=data">新片上映</a></li>
+						<li><a href="search.jsp?types=movie&sort=score">最佳口碑</a></li>
+						<li><a href="search.jsp?types=movie&sort=max">热议影片</a></li>
+					</ul>
+				</li>
+				<li><a href="search.jsp?types=TV">电视</a>
+					<ul class="subnav">
+						<li><a href="search.jsp?types=TV&sort=hot">时下流行</a></li>
+						<li><a href="search.jsp?types=TV&sort=data">新片上映</a></li>
+						<li><a href="search.jsp?types=TV&sort=score">最佳口碑</a></li>
+						<li><a href="search.jsp?types=TV&sort=max">热议影片</a></li>
+					</ul>
+				</li>
+				<li><a href="search.jsp?sort=hot">热评影视剧</a></li>
+				<li><a href="#">发现</a></li>
+			</ul>
+		</div>
+		<div id="serach">
+			<form  action="search.jsp" method="get">
+				<input type="text"  name="content" id="content" autocomplete="off" value="">
+				<input type="submit" id="submit" name="submit" value="">
+				<i class="fa fa-search fa-1x"></i>
+			</form>
+		</div>
+	</div>
+</div>
   
   <div id="info_main">
      <div id="info_bg"></div>
