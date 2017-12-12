@@ -11,7 +11,7 @@ a:link, a:visited, a:hover, a:active {text-decoration: none;}
 	left: -5%;
 	position: absolute;
 	top:-40%;
-	filter: blur(40px)  alpha(opacity=70);
+	filter: blur(40px) opacity(0.9);
 	z-index: -1;
 }
 #bk_outer{
