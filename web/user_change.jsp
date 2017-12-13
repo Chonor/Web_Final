@@ -20,9 +20,10 @@
 
 
     Integer sex_int=2;
-    if(sex.equals("unkown"))sex_int=2;
-    else if(sex.equals("man"))sex_int=0;
-    else sex_int=1;
+    if(sex.equals("man"))sex_int=0;
+    else if(sex.equals("woman"))sex_int=1;
+    Integer src_flag=0;
+    if(img_src!="")src_flag=1;
 %>
 
 <!doctype html>
@@ -90,7 +91,7 @@
             <label >头像：</label>
             <button disabled>点击上传头像</button>
             <input type="file" name="file" id="file"  onchange="setImagePreview()">
-            <img id="preview" src="<%=img_src%>">
+            <img id="preview" src="<%=img_src%>" style="opacity: 0">
 
         </p>
         <p id="name">
@@ -125,5 +126,5 @@
 </body>
 </html>
 <script>sexCheck(<%=sex_int%>)</script>
-
+<script>imgCheck(<%=src_flag%>)</script>
 
