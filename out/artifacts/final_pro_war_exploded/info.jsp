@@ -5,6 +5,8 @@
 %>
 <%
 	String user_id = (String)session.getAttribute("user_id");//用户id
+    String Login_src="login.jsp";
+    if(user_id!=null)Login_src="userinfo.jsp?uid="+user_id;
     String mid = request.getParameter("mid");//电影id
     if(mid==null)mid="";
 	String Login="Loign";//登陆后显示用户名
@@ -74,7 +76,7 @@
 <div id="header_outer">
     <div id="header" class="wrapper">
         <p>网站名字啊</p>
-        <a href="#"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
+        <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
 
@@ -226,7 +228,7 @@
 </div>
 <div id="featured">
     <div id="featured_sub">
-        <p>本周精选</p>
+        <p>猜你喜欢</p>
         <ul class="subshow">
             <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[0]%>'" onmousemove="onmoveli(0)" onmouseout="outmoveli(0)"><img src="<%=recommend_img[0]%>"><a><%=recommend_name[0]%></a></li>
             <li name="show_li" onclick="location.href='info.jsp?mid=<%=recommend_id[1]%>'" onmousemove="onmoveli(1)" onmouseout="outmoveli(1)"><img src="<%=recommend_img[1]%>"><a><%=recommend_name[1]%></a></li>

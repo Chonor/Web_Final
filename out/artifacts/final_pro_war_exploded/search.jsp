@@ -9,6 +9,9 @@
 
 <%
     String user_id = (String)session.getAttribute("user_id");//用户id
+    String Login="Login";//登陆后的名字获取 id->名字 然后把这个改了
+    String Login_src="login.jsp";
+    if(user_id!=null)Login_src="userinfo.jsp?uid="+user_id;
     String Name[]={"1","2","3","4","5"};//存放电影名
     String mid[]={"1","2","3","4","5"};//存放电影id
     String Info[]={"1","2","3","4","5"};//存放电影信息
@@ -18,7 +21,7 @@
     Integer List_size=5; //搜到的数目 >5  就=5 因为只有5条
     String background_src="";//背景可能要改改 留着
 
-    String Login="Login";//登陆后的名字获取 id->名字 然后把这个改了
+
 
     String Search_info;//搜索内容
     String Search_resule="结果如下";//搜索结果
@@ -86,7 +89,7 @@
 <div id="header_outer">
     <div id="header" class="wrapper">
         <p>网站名字啊</p>
-        <a href="#"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
+        <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
 
