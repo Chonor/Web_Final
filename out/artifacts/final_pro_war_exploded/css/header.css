@@ -59,7 +59,7 @@ li {list-style-type:none}
 #logo{
 	height:60px;
 	width: 60px;
-	background:url( image/main_logo.png) ;
+	background:url(../image/main_logo.png) ;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;

@@ -11,18 +11,31 @@
     Integer flag=0; //已经登录自动转跳
     if(user_id!=null)flag=1;
 
+    /**
+     * 表单中有的信息
+     * user 用户名
+     * passwd 密码
+     * val 验证码结果 true or false
+     */
     String user,passwd,val,login,init;
+
     user=request.getParameter("user");
     passwd=request.getParameter("password");
     val=request.getParameter("val");
     login=request.getParameter("login");
     init=request.getParameter("init");
-    Integer login_flag=-1;
+
+    Integer login_flag=-1,Init_fail=0;
     if(login==null&&init!=null){
-        //注册 加上 uid 转到用户信息界面  记得给session 赋值
+        //注册 转到用户信息界面要求用户填详细信息  记得给session 赋值
+
+
+        if(val.equals("false"))login_flag=1;//验证码不正确
+        if(false)//如果用户已经存在则保留在原网页
+            Init_fail=1;
     }
     else if(login!=null&&init==null){
-        //登录
+        //登录 数据库判断 记得给session 赋值
 
         if(val.equals("false"))login_flag=1;//验证码不正确
         else if(true)login_flag=2;//用户存在且密码匹配
@@ -112,6 +125,7 @@
 
 <script>createCode();</script>
 <script>logined(<%=flag%>,<%=user_id%>)</script>
+<script>Init_fail(<%=Init_fail%>)</script>
 <script>inputworry(<%=login_flag%>)</script>
 </body>
 </html>

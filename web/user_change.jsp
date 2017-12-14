@@ -12,10 +12,10 @@
     String Login_src="login.jsp";
     if(user_id!=null)Login_src="userinfo.jsp";
 
-    String name="",sex="",info="",hobby="",img_src=""; //数据库调出来
-
-
-
+    /**
+     * 提交之后获取
+     */
+    String name="",sex="",info="",hobby="",img_src="";
 
 
 

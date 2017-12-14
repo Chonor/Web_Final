@@ -13,12 +13,20 @@
     String Login_src="login.jsp";
     if(user_id!=null)Login_src="userinfo.jsp";
 
-
+    /**
+     * 个人信息类
+     * 数据库拿到
+     */
     String name,info,hobby,img_src="image/main_logo.png";//头像;
     name="名字";
     info="简介";
     hobby="爱好";
 
+    /**
+     * 通知数据库
+     *
+     * 后面通知翻页
+     */
     Integer info_cnt=3;//通知数量  0-3
     String info_name[]={"通知1","通知2","通知3"};
     String info_content[]={"内容1","内容2","内容3"};
@@ -31,6 +39,11 @@
     int info_pre = (info_pgno>0)?info_pgno-1:0;
     int info_next = info_pgno+1;
 
+    /**
+     * 获取自己的评论信息
+     * 评论翻页
+     * 其中src为电影封面
+     */
     Integer commit_cnt=3;//评论数量  0-3
     String commit_name[]={"评论1","评论2","评论3"};
     String commit_content[]={"内容1","内容2","内容3"};
@@ -43,6 +56,11 @@
     int commit_pre = (commit_pgno>0)?commit_pgno-1:0;
     int commit_next = commit_pgno+1;
 
+    /**
+     * 收藏电影
+     * src 为电影封面
+     * 之后也是翻页
+     */
     Integer like_cnt=3;//收藏数量  0-3
     String like_name[]={"收藏1","收藏2","收藏3"};
     String like_content[]={"内容1","内容2","内容3"};

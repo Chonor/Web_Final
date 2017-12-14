@@ -63,3 +63,15 @@ function inputin(i){
 function logined(i,s) {
 	if(i==1)window.location.href="userinfo.jsp?uid="+s;
 }
+function Init_fail(i) {
+    if(i==1){
+        obj = document.getElementById("user");
+        obj.style.background = "red";
+        obj.placeholder = "用户名已存在";
+        obj.value = "";
+        obj = document.getElementById("password");
+        obj.style.background = "red";
+        obj.placeholder = "";
+        obj.value = "";
+    }
+}

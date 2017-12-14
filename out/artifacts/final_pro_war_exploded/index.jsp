@@ -11,6 +11,7 @@
     String Login="Login";//登陆后显示用户名
     String Login_src="login.jsp";
     if(user_id!=null)Login_src="userinfo.jsp";
+
     String display_src[]={"tmp.jpg","onesheet.jpg","tmp.jpg","onesheet.jpg"};//4个 16:9的图片
     String display_id[]={"1","2","3","4"};//上面4个对应的id
     String featured_img_src[]={"onesheet.jpg","onesheet.jpg","onesheet.jpg","onesheet.jpg"};//精选图片

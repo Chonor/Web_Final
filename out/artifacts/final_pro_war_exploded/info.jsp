@@ -5,11 +5,14 @@
 %>
 <%
 	String user_id = (String)session.getAttribute("user_id");//用户id
+    String Login="Loign";//登陆后显示用户名
     String Login_src="login.jsp";
     if(user_id!=null)Login_src="userinfo.jsp";
+
     String mid = request.getParameter("mid");//电影id
     if(mid==null)mid="";
-	String Login="Loign";//登陆后显示用户名
+
+
 	String title_call_to_movie,tagline,score,movie_src,movie_introduction,num_comment,my_img=new String();
 	title_call_to_movie="Men In Black Trilogy"; //电影名称
 	tagline="NOW ON 4K ULTRA HD™"; //二级标题，tag一类的东西
@@ -38,14 +41,14 @@
 	//推荐部分变量
 	String[] recommend_img=new String[4];//推荐电影的图片
 	String[] recommend_name=new String[4];//推荐电影的名称
-    Integer[] recommend_id=new Integer[4];//推荐电影的名称
+    Integer[] recommend_id=new Integer[4];//推荐电影的id
 	for(int i=0;i<4;i++){ //初始化
 	    recommend_img[i]="推荐.jpg";
 	    recommend_name[i]="Men In Black";
 	    recommend_id[i]=i;
 	}
 
-    Integer pgno = 0; //当前页号
+    Integer pgno = 0; //当前页号翻页用
     String param = request.getParameter("pgno");
     if(param != null && !param.isEmpty()){
         pgno = Integer.parseInt(param);
