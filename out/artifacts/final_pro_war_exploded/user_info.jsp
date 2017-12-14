@@ -30,7 +30,7 @@
     Integer info_cnt=3;//通知数量  0-3
     String info_name[]={"通知1","通知2","通知3"};
     String info_content[]={"内容1","内容2","内容3"};
-
+    String info_date[]={"1111.11.11","1111.11.11","1111.11.11"};
     Integer info_pgno = 0; //当前通知页号
     String param1 = request.getParameter("info_pgno");
     if(param1 != null && !param1.isEmpty()){
@@ -151,14 +151,17 @@
                 <p class="tips" id="info_tag">还没有通知</p>
                 <div class="info_item">
                     <p class="info_name"><%=info_name[0]%></p>
+                    <p class="info_data"><%=info_date[0]%></p>
                     <p class="info_content"><%=info_content[0]%></p>
                 </div>
                 <div class="info_item">
                     <p class="info_name"><%=info_name[1]%></p>
+                    <p class="info_data"><%=info_date[1]%></p>
                     <p class="info_content"><%=info_content[1]%></p>
                 </div>
                 <div class="info_item">
                     <p class="info_name"><%=info_name[2]%></p>
+                    <p class="info_data"><%=info_date[2]%></p>
                     <p class="info_content"><%=info_content[2]%></p>
                 </div>
                 <div class="pages">
