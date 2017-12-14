@@ -48,6 +48,7 @@
     String commit_name[]={"评论1","评论2","评论3"};
     String commit_content[]={"内容1","内容2","内容3"};
     String commit_src[]={"图1","图2","图3"};
+    String commit_mid[]={"","",""};
     Integer commit_pgno = 0; //当前评论页号
     String param2 = request.getParameter("commit_pgno");
     if(param2 != null && !param2.isEmpty()){
@@ -65,6 +66,7 @@
     String like_name[]={"收藏1","收藏2","收藏3"};
     String like_content[]={"内容1","内容2","内容3"};
     String like_src[]={"图1","图2","图3"};
+    String like_mid[]={"","",""};
     Integer like_pgno = 0; //当前收藏页号
     String param3 = request.getParameter("like_pgno");
     if(param3 != null && !param3.isEmpty()){
