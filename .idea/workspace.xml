@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49740d05-b09b-4b92-bc52-251490af3a70" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/css/search_.css" afterPath="$PROJECT_DIR$/web/css/search_.css" />
-      <change beforePath="$PROJECT_DIR$/web/css/user_info.css" afterPath="$PROJECT_DIR$/web/css/user_info.css" />
-      <change beforePath="$PROJECT_DIR$/web/search.jsp" afterPath="$PROJECT_DIR$/web/search.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/user_info.jsp" afterPath="$PROJECT_DIR$/web/user_info.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_info.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_info.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user_info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4038">
-              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="116" />
+            <state relative-caret-position="621">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -85,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3874">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="483">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -163,7 +160,6 @@
         <option value="$PROJECT_DIR$/web/css/header.css" />
         <option value="$PROJECT_DIR$/web/js/login.js" />
         <option value="$PROJECT_DIR$/web/user_change.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/js/face_preview.js" />
         <option value="$PROJECT_DIR$/web/js/info.js" />
@@ -173,6 +169,7 @@
         <option value="$PROJECT_DIR$/web/search.jsp" />
         <option value="$PROJECT_DIR$/web/css/user_info.css" />
         <option value="$PROJECT_DIR$/web/user_info.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -468,12 +465,12 @@
       <workItem from="1513229029854" duration="3304000" />
       <workItem from="1513232389311" duration="57000" />
       <workItem from="1513248037118" duration="8920000" />
-      <workItem from="1513266509971" duration="5163000" />
+      <workItem from="1513266509971" duration="5421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62116000" />
+    <option name="totallyTimeSpent" value="62374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2331" y="-9" width="2341" height="1368" extended-state="6" />
@@ -757,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3874">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/info.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -797,14 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/user_change.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="92" column="82" lean-forward="true" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/user_change.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3440">
@@ -821,10 +802,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/user_change.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2116">
+          <caret line="92" column="82" lean-forward="true" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/user_info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4038">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="116" />
+        <state relative-caret-position="621">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>
