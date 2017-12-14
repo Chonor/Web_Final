@@ -6,7 +6,7 @@
 <%
 	String user_id = (String)session.getAttribute("user_id");//用户id
     String Login_src="login.jsp";
-    if(user_id!=null)Login_src="userinfo.jsp?uid="+user_id;
+    if(user_id!=null)Login_src="userinfo.jsp";
     String mid = request.getParameter("mid");//电影id
     if(mid==null)mid="";
 	String Login="Loign";//登陆后显示用户名

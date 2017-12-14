@@ -24,7 +24,7 @@ function onstart(cnt1,cnt2){
     obj=document.getElementsByName("list_item");
     if(cnt1==0)document.getElementById("pre_page").hidden="hidden";
     if(cnt2<5)document.getElementById("next_page").hidden="hidden";
-    for(var i=cnt2;obj.length;i++){
+    for(var i=cnt2;i<obj.length;i++){
         obj[i].hidden="hidden";
     }
 }
