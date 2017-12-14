@@ -9,6 +9,12 @@
     Integer permissions=0;//用户权限 0普通1管理员
     String Login_src="login.jsp";
     if(user_id!=null)Login_src="userinfo.jsp";
+    /**
+     * 发表评论
+     * mid=1&content=&level=5&file=&submit=OK
+     * mid   内容     评分    文件   提交
+     */
+    //写一下吧
 
     /**
      * deleted_id 删除的那条评论id
