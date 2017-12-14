@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49740d05-b09b-4b92-bc52-251490af3a70" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/css/user_info.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/user_info.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/user_info.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/info.jsp" afterPath="$PROJECT_DIR$/web/info.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/js/info.js" afterPath="$PROJECT_DIR$/web/js/info.js" />
-      <change beforePath="$PROJECT_DIR$/web/user_change.jsp" afterPath="$PROJECT_DIR$/web/user_change.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/css/header.css" afterPath="$PROJECT_DIR$/web/css/header.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,16 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="user_change.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/user_change.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3680">
-              <caret line="160" column="1" lean-forward="false" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="user_change.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user_change.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,15 +69,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_info.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_info.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user_info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="4818">
               <caret line="182" column="21" lean-forward="false" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,7 +155,6 @@
         <option value="$PROJECT_DIR$/web/js/search.js" />
         <option value="$PROJECT_DIR$/web/css/index_.css" />
         <option value="$PROJECT_DIR$/web/css/info.css" />
-        <option value="$PROJECT_DIR$/web/css/header.css" />
         <option value="$PROJECT_DIR$/web/search.jsp" />
         <option value="$PROJECT_DIR$/web/js/login.js" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
@@ -177,6 +169,7 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/css/user_info.css" />
         <option value="$PROJECT_DIR$/web/user_info.jsp" />
+        <option value="$PROJECT_DIR$/web/css/header.css" />
       </list>
     </option>
   </component>
@@ -470,12 +463,12 @@
       <workItem from="1513042705549" duration="8059000" />
       <workItem from="1513083745021" duration="9823000" />
       <workItem from="1513128566463" duration="10739000" />
-      <workItem from="1513229029854" duration="2722000" />
+      <workItem from="1513229029854" duration="2882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47394000" />
+    <option name="totallyTimeSpent" value="47554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2331" y="-9" width="2341" height="1368" extended-state="6" />
@@ -697,13 +690,6 @@
     <entry file="file://$PROJECT_DIR$/web/index.html" />
     <entry file="file://$PROJECT_DIR$/web/search.html" />
     <entry file="file://$PROJECT_DIR$/web/js/search.js" />
-    <entry file="file://$PROJECT_DIR$/web/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="129" column="31" lean-forward="false" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -824,12 +810,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="4818">
           <caret line="182" column="21" lean-forward="false" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
