@@ -8,7 +8,7 @@
     String Login="Loign";//登陆后显示用户名
     Integer permissions=0;//用户权限 0普通1管理员
     String Login_src="login.jsp";
-    if(user_id!=null)Login_src="userinfo.jsp";
+    if(user_id!=null)Login_src="user_info.jsp";
     /**
      * 发表评论
      * mid=1&content=&level=5&file=&submit=OK
@@ -106,7 +106,7 @@
 <html  lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>Info</title>
+    <title>Movie_Info_<%=title_call_to_movie %></title>
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/info.css" />
@@ -126,7 +126,7 @@
 
 <div id="header_outer">
     <div id="header" class="wrapper">
-        <p>网站名字啊</p>
+        <p>GoodMovie</p>
         <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
@@ -166,6 +166,17 @@
     </div>
 </div>
 
+<div id="photo_outer">
+    <div id="photodisplay">
+
+        <button onclick="photoclose()" id="closebtn0">&times;</button>
+        <i onclick="prePhoto()" id="prebtn" class="fa fa-chevron-left btn"></i>
+        <i onclick="nextPhoto()" id="nextbtn" class="fa fa-chevron-right btn"></i>
+        <div id="photo_content">
+            <img id="photos" src="image/bk.jpg">
+        </div>
+    </div>
+</div>
 
 <div id="info_main">
     <div id="info_inner">
@@ -265,7 +276,7 @@
                 <div class="comment_stat"><span name="star_add"><script>star_add(3,<%=user_star[3]%>)</script></span></div>
                 <div class="comment_time"> <%=user_time[3]%></div>
                 <div class="comment_select"><a  href="info.jsp?pgno=<%=pgno%>&mid=<%=mid%>&report=<%=comment_id[3]%>">举报</a><a  href="info.jsp?pgno=<%=pgno%>&mid=<%=mid%>&deleted=<%=comment_id[3]%>">删除</a></div>
-    </div>
+            </div>
         </div>
         <div class="list_item" name="list_item">
             <div><img class="user_img" src="<%=user_img[4]%>"></div>
@@ -304,3 +315,5 @@
 </body>
 </html>
 <script>setdisplayimg("<%=comment_src[0]%>","<%=comment_src[1]%>","<%=comment_src[2]%>","<%=comment_src[3]%>","<%=comment_src[4]%>")</script>
+
+

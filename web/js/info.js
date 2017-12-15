@@ -68,3 +68,19 @@ function setImagePreview() {
     }
 
 }
+function photoDisplay(){
+    document.getElementById("photo_outer").style.display = "block";
+    var h=document.getElementById("photos").height/2;
+
+    document.getElementById("prebtn").style.top=h+"px";
+    document.getElementById("nextbtn").style.top=h+"px";
+}
+function photoclose(){
+    document.getElementById("photo_outer").style.display = "none";
+}
+function movemainphoto(){
+    document.getElementById("morephoto").style.display = "block";
+}
+function outmainphoto(){
+    document.getElementById("morephoto").style.display = "none";
+}

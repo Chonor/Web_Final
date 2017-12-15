@@ -11,7 +11,7 @@
     String user_id = (String)session.getAttribute("user_id");//用户id
     String Login="Login";//登陆后显示用户名
     String Login_src="login.jsp";
-    if(user_id!=null)Login_src="userinfo.jsp";
+    if(user_id!=null)Login_src="user_info.jsp";
 
     /**
      * 个人信息类
@@ -77,7 +77,6 @@
 %>
 
 
-
 <!doctype html>
 <html>
 <head>
@@ -91,10 +90,10 @@
 <body>
 
 <div id="header_outer">
-<div id="header" class="wrapper">
-    <p>网站名字啊</p>
-    <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
-</div><!--header-->
+    <div id="header" class="wrapper">
+        <p>GoodMovie</p>
+        <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
+    </div><!--header-->
 </div> <!--header_outer-->
 
 <div id="nav_outer">

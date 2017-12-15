@@ -23,7 +23,7 @@
     String mid[]={"1","2","3","4","5"};//存放电影id
     String Info[]={"1","2","3","4","5"};//存放电影信息
     String Score[]={"9","9.5","6","7.5","8.5"};//存放分数
-    String Date[]={"",",","","",""};//存放电影上映日期
+    String Date[]={"","","","",""};//存放电影上映日期
     String Img_src[]={"","","","",""};//图片路径
     Integer Like[]={0,1,0,1,0};// 存当前用户是否收藏的，0没收藏，1收藏，如果没有用户登录那就全部设置0。
     Integer List_size=5; //搜到的数目 >5  就=5 因为只有5条
@@ -116,7 +116,7 @@
 
 <div id="header_outer">
     <div id="header" class="wrapper">
-        <p>网站名字啊</p>
+        <p>GoodMovie</p>
         <a href="<%=Login_src%>"><i class="fa fa-user-circle-o"></i> <%=Login%></a>
     </div><!--header-->
 </div> <!--header_outer-->
@@ -340,3 +340,4 @@
         else if(i==4)location.href="search.jsp?pgno=<%=pgno%>&content=<%=Search_info%>&submit=搜索&sort=<%=Chooes%>&types=<%=types_%>&likemid=<%=mid[4]%>&like="+like4;
     }
 </script>
+
